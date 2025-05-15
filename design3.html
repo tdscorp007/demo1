@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMKAY POLYMERS - High-Performance Polymer Consulting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #000000;
+            --secondary-color: #555555;
+            --light-color: #ffffff;
+            --dark-color: #e94d65;
+            --text-color: #666666;
+            --nav-color : #3e1010;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--dark-color);
+            line-height: 1.3;
+        }
+        
+        .navbar {
+            background-color: var(--light-color);
+            padding: 20px 0;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--primary-color) !important;
+            text-transform: uppercase;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            color: var(--nav-color) !important;
+            margin: 0 5px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+        
+        .hero {
+            background-color: #f5f5f5;
+            padding: 120px 0 100px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+        
+        .service-card {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: none;
+            height: 100%;
+        }
+        
+        .service-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+        
+        .feature-box {
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info-box {
+            margin-bottom: 30px;
+        }
+        
+        .social-icon {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #f5f5f5;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+        }
+        
+        footer {
+            background-color: #1a4860;
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-links h4 {
+            color: white;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+        
+        .footer-links a {
+            color: #aaaaaa;
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            border-top: 1px solid #444444;
+            padding-top: 20px;
+            margin-top: 40px;
+        }
+        
+        /* Map section styles */
+        .map-section {
+            background-color: #f5f5f5;
+            padding: 60px 0;
+        }
+        
+        .map-locations {
+            column-count: 3;
+            column-gap: 40px;
+        }
+        
+        .map-locations ul {
+            list-style: none;
+            padding-left: 0;
+            break-inside: avoid;
+        }
+        
+        .map-locations li {
+            margin-bottom: 10px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .map-locations {
+                column-count: 2;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 100px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .map-locations {
+                column-count: 1;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                padding: 80px 0 60px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .navbar-brand {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#home">EMKAY POLYMERS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#expertise">Expertise</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item ms-lg-3"><a href="tel:+4917632880032" class="nav-link"><i class="fas fa-phone me-1"></i> +49 176 3288 0032</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="container">
+        <h1>Innovative Polymer Solutions</h1>
+        <p>Your trusted partner in high-performance polymer consulting and advanced material solutions.</p>
+        <div>
+            <a href="#contact" class="btn btn-dark me-2">Contact Us</a>
+            <a href="#services" class="btn btn-outline-dark">Our Services</a>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-5">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <h2 class="mb-4">Driving Innovation in Polymer Science</h2>
+                <p class="mb-4">At EMKAY POLYMERS, we specialize in delivering strategic consulting and advanced technical support in the field of high-performance polymers. Our expertise spans across research, development, and business strategy in the polymer industry.</p>
+                
+                <div class="row mt-4">
+                    <div class="col-md-6 mb-4">
+                        <div class="d-flex">
+                            <div class="me-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-2">15+ Years Experience</h5>
+                                <p class="mb-0">Deep industry knowledge across multiple sectors</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="d-flex">
+                            <div class="me-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-2">Global Reach</h5>
+                                <p class="mb-0">Projects completed in 12+ countries</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="feature-box">
+                            <div class="feature-icon">
+                                <i class="fas fa-chess"></i>
+                            </div>
+                            <h4>PLAN, THEN DO</h4>
+                            <p>We're here to inform which polymer solutions need funding and which are drains on resources.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="feature-box">
+                            <div class="feature-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h4>SMALL TACTICS</h4>
+                            <p>The polymer industry is like chess - every move counts and you keep score with results.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="feature-box">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4>PROOF, NOT PROMISES</h4>
+                            <p>Our nanotechnology expertise will close the loop on focusing solely on the bottom line.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="feature-box">
+                            <div class="feature-icon">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <h4>SCIENTIFIC APPROACH</h4>
+                            <p>From lab-scale synthesis to commercial applications in advanced polymers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-5 bg-light">
+    <div class="container py-5">
+        <h2 class="section-title">Our Services</h2>
+        
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h4>Technical Consulting</h4>
+                    <p>Expert guidance from concept to commercialization, including material selection and process optimization for high-performance polymers.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Business Development</h4>
+                    <p>Strategic planning and technical sales enablement in advanced thermoplastics and high-performance polymers.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h4>Training & Workshops</h4>
+                    <p>Customized training sessions led by experts, covering thermoplastics, nanocomposites, and sustainability.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Expertise Section -->
+<section id="expertise" class="py-5">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <h2>30 Years of Polymer Expertise</h2>
+                <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+                <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation diversity.</p>
+                
+                <div class="row mt-4">
+                    <div class="col-md-4 mb-4">
+                        <h5>Consistency</h5>
+                        <p>Podcasting operational change management inside of workflow.</p>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <h5>Improvement</h5>
+                        <p>Dynamically innovate customer service for state of the art customer.</p>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <h5>Branching</h5>
+                        <p>Pursue scalable customer service through sustainable potentialities.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="service-card">
+                            <h4>Consultancy Industries</h4>
+                            <p>Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line. Override the digital divide with additional clickthroughs from DevOps.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="service-card">
+                            <h4>Strategy</h4>
+                            <p>Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="service-card">
+                            <h4>Business Planning</h4>
+                            <p>Podcasting operational change management inside of workflows to establish a framework.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="service-card">
+                            <h4>Start Ups</h4>
+                            <p>Interactively coordinate proactive e-commerce via process-centric outside the box thinking.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="map-section py-5">
+     <div class="container">
+         <h2 class="section-title">Our Locations</h2>
+         
+         <div id="map" style="height: 500px; width: 100%; margin-bottom: 30px;"></div>
+         
+         <div class="map-locations">
+             <!-- <ul>
+                 <li>ST JOHN'S WOOD</li>
+                 <li>GALAXY VALE</li>
+                 <li>LILBURN</li>
+                 <li>MELDA YALE</li>
+                 <li>DRA HILL</li>
+                 <li>WESTERN PINE ESTATE</li>
+                 <li>JADIN</li>
+                 <li>PADDINGTON</li>
+                 <li>HYDE PARK ESTATE</li>
+                 <li>SUPERFICIAL</li>
+                 <li>GRIFF</li>
+                 <li>MARYLEBONE</li>
+                 <li>KIDDY</li>
+                 <li>MAYFAIR</li>
+                 <li>SOHO</li>
+                 <li>CHINA COWS</li>
+                 <li>BLAZKY REARS</li>
+                 <li>RICH TINDING</li>
+                 <li>CITY OF LONDON</li>
+                 <li>FINSBURY</li>
+                 <li>BARBICAN</li>
+             </ul> -->
+         </div>
+     </div>
+ </section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <h2 class="mb-4">Get in Touch</h2>
+                <p class="mb-4">Come and visit our quarters or simply send us an email anytime you want. We are open to all suggestions from our clients.</p>
+                
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <h4>HAMBURG</h4>
+                        <p>Flurstrasse 63, 22549-Hamburg, Germany</p>
+                        <p><i class="fas fa-phone me-2"></i> +49 176 3288 0032</p>
+                        <p><i class="fas fa-envelope me-2"></i> enquiries@emkaypolymers.com</p>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <h4>HEADQUARTERS</h4>
+                        <p>Taking seamless key performance indicators offline to maximise the long tail.</p>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <h4 class="mb-3">Follow Us</h4>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <form>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Subject">
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-dark">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <h4>EMKAY POLYMERS</h4>
+                <p>Your trusted partner in high-performance polymer consulting and advanced material solutions.</p>
+            </div>
+            <div class="col-md-2 mb-4">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+            </div>
+            <div class="col-md-2 mb-4">
+                <h4>Company</h4>
+                <a href="#expertise">Expertise</a>
+                <a href="#contact">Contact</a>
+                <a href="#">Careers</a>
+            </div>
+            <div class="col-md-4">
+                <h4>Newsletter</h4>
+                <p>Subscribe to our newsletter for the latest updates in polymer technology.</p>
+                <form class="mt-3">
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your Email" required>
+                        <button class="btn btn-light" type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="copyright text-center">
+            <p class="mb-0">&copy; 2025 EMKAY POLYMERS. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Update active nav link on scroll
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    window.addEventListener('scroll', function() {
+        let current = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            
+            if (pageYOffset >= (sectionTop - 100)) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active');
+            }
+        });
+    });
+    
+</script>
+
+Google Maps API
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJ9XlGgekjWlXuwh2a5wSihL83EvpgIKA
+&callback=initMap" async defer></script>
+
+<script>
+    // Initialize and add the map
+    function initMap() {
+        // Hamburg location (Flurstrasse 63, 22549-Hamburg, Germany)
+        const hamburg = { lat: 53.5753, lng: 9.9016 };
+        
+        // Create the map centered at Hamburg
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 12,
+            center: hamburg,
+            styles: [
+                {
+                    "featureType": "administrative",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#444444"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "landscape",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "color": "#f2f2f2"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "saturation": -100
+                        },
+                        {
+                            "lightness": 45
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "visibility": "simplified"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.arterial",
+                    "elementType": "labels.icon",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "transit",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "color": "#dde6e8"
+                        },
+                        {
+                            "visibility": "on"
+                        }
+                    ]
+                }
+            ]
+        });
+        
+        // Add a marker for Hamburg location
+        new google.maps.Marker({
+            position: hamburg,
+            map: map,
+            title: "EMKAY POLYMERS Hamburg Office",
+            icon: {
+                url: "https://maps.google.com/mapfiles/ms/icons/red-dot.png"
+            }
+        });
+        
+        // You can add more markers for other locations if needed
+        // Example:
+        // new google.maps.Marker({
+        //     position: { lat: 51.5074, lng: -0.1278 },
+        //     map: map,
+        //     title: "London Office"
+        // });
+    }
+    
+    // Fallback in case Google Maps doesn't load
+    window.onload = function() {
+        if (typeof google === 'undefined') {
+            document.getElementById('map').innerHTML = 
+                '<div style="height: 500px; display: flex; justify-content: center; align-items: center; background: #f5f5f5;">' +
+                '<p style="text-align: center;">Map could not be loaded. Please check your internet connection.</p>' +
+                '</div>';
+        }
+    };
+</script>
+
+</body>
+</html>
